@@ -1,0 +1,27 @@
+# RandomizeChests Configuration
+# =============================
+# These control the weighted probability of each loot tier based on
+# how far a chest is from the cornucopia center.
+#
+# "t" is the normalized distance: 0.0 = dead center, 1.0 = arena edge.
+# Between anchors, values are linearly interpolated.
+# Each row must sum to 100.
+
+probabilities:
+  # Chests right at the center (t = 0.0)
+  center:
+    tier1: 85   # CHEST - weakest loot
+    tier2: 14   # TRAPPED_CHEST - mid loot
+    tier3: 1    # BARREL - best loot
+
+  # Chests at mid-range (t = 0.5)
+  midrange:
+    tier1: 60
+    tier2: 25
+    tier3: 15
+
+  # Chests at the arena edge (t = 1.0)
+  edge:
+    tier1: 10
+    tier2: 50
+    tier3: 40
